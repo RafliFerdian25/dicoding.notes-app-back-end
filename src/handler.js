@@ -20,7 +20,7 @@ const addNoteHandler = (request, h) => {
     updatedAt,
   };
   notes.push(newNote);
-  console.log(newNote);
+  // console.log(newNote);
   // console.log(notes);
 
   // apakah notes berhasil tersimpan pada notes.js?
@@ -110,7 +110,7 @@ const editNoteByIdHandler = (request, h) => {
   const index = notes.findIndex((note) => note.id === id);
 
   if (index !== -1) {
-    console.log(notes[index]);
+    // console.log(notes[index]);
     notes[index] = {
       ...notes[index],
       title,
@@ -118,7 +118,7 @@ const editNoteByIdHandler = (request, h) => {
       body,
       updatedAt,
     };
-    console.log(notes[index]);
+    // console.log(notes[index]);
     const response = h.response({
       status: "success",
       message: "Catatan berhasil diperbaharui",
